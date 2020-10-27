@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: oaltawilpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oaltawilpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: oaltawilpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: oaltawilpipelinesjavascriptdocker 
+          image: oaltawil.azurecr.io/oaltawilpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
